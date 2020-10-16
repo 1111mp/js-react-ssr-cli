@@ -1,0 +1,28 @@
+{
+  "name": "js-react-ssr-cli",
+  "version": "1.0.1",
+  "bin": {
+    "react-ssr": "./bin/react-ssr-cli.js"
+  },
+  "author": "say_1mp@163.com",
+  "keywords": [
+    "React",
+    "react",
+    "react-ssr",
+    "React SSR",
+    "react-ssr-cli",
+    "react ssr cli",
+    "React SSR CLI"
+  ],
+  "homepage": "https://github.com/1111mp/js-react-ssr-cli",
+  "repository": "https://github.com/1111mp/js-react-ssr-cli",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.1.0",
+    "cross-spawn": "^7.0.3",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3",
+    "ora": "^5.1.0"
+  }
+}
