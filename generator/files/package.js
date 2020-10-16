@@ -54,6 +54,7 @@ module.exports = function (opts = {}) {
 				"stylus": "^0.54.8",
 				"stylus-loader": "^4.1.1",
 				"url-loader": "^4.1.1",
+				"cross-env": "^7.0.2",
 				"webpack": "4.43.0",
 				"webpack-cli": "^4.0.0",
 				"webpack-dev-middleware": "^3.7.2",

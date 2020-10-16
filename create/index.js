@@ -44,7 +44,7 @@ module.exports = async function create(opts = {}) {
     return;
   }
 
-  spinner.start("installing modules...");
+  spinner.info("installing modules...");
 
   install({ cwd: projectDir, isYarn })
     .then(() => {
