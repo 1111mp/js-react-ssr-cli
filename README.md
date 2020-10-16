@@ -9,7 +9,7 @@ React 的服务端渲染脚手架
 ```
 npm install js-react-ssr-cli -g
 or
-yarn add js-react-ssr-cli -g
+yarn global add js-react-ssr-cli
 ```
 
 然后创建项目：
