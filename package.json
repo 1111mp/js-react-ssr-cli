@@ -1,6 +1,6 @@
 {
   "name": "js-react-ssr-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "bin": {
     "react-ssrs": "./bin/react-ssr-cli.js"
   },
