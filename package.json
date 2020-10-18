@@ -2,7 +2,7 @@
   "name": "js-react-ssr-cli",
   "version": "1.0.3",
   "bin": {
-    "react-ssr": "./bin/react-ssr-cli.js"
+    "react-ssrs": "./bin/react-ssr-cli.js"
   },
   "author": "say_1mp@163.com",
   "keywords": [

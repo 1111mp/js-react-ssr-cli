@@ -29,6 +29,15 @@ program
         },
         {
           type: "list",
+          message: "Use js or ts:",
+          name: "es",
+          choices: ["js", "ts"],
+          filter: function (val) {
+            return val.toLowerCase();
+          },
+        },
+        {
+          type: "list",
           message: "Choose your Store manager:",
           name: "store",
           choices: ["MobX", "Redux"],
@@ -45,6 +54,7 @@ program
         },
       ])
       .then((answers) => {
+        console.log(answers);
         const create = require("../create");
         create({
           ...answers,

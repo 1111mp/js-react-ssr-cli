@@ -5,15 +5,15 @@ const fs = require("fs-extra");
 const install = require("./utils/install");
 
 module.exports = async function create(opts = {}) {
-  const { appName, isYarn, store } = opts;
+  const { appName, es, isYarn, store } = opts;
   const spinner = ora("creating... \n").start();
   const projectDir = path.join(process.cwd(), appName);
-  const tempSrc = path.resolve(__dirname, "../template");
+  const tempSrc = path.resolve(__dirname, `../template/${es}`);
 
   try {
     const { temp, dir, name: fileName } = require(path.resolve(
       __dirname,
-      "../generator/files/package.js"
+      `../generator/${es}/files/package.js`
     ))(opts);
 
     fs.mkdirpSync(path.join(projectDir, dir));
@@ -29,11 +29,11 @@ module.exports = async function create(opts = {}) {
 
     if (store === "mobx") {
       // mobx
-      const mobxSrc = path.resolve(__dirname, "../generator/mobx");
+      const mobxSrc = path.resolve(__dirname, `../generator/${es}/mobx`);
       fs.copySync(mobxSrc, projectDir);
     } else {
       // redux
-      const reduxSrc = path.resolve(__dirname, "../generator/redux");
+      const reduxSrc = path.resolve(__dirname, `../generator/${es}/redux`);
       fs.copySync(reduxSrc, projectDir);
     }
 
