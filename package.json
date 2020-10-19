@@ -1,6 +1,6 @@
 {
   "name": "js-react-ssr-cli",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "bin": {
     "react-ssr": "./bin/react-ssr-cli.js"
   },
@@ -13,7 +13,8 @@
     "react-ssr-cli",
     "react ssr cli",
     "React SSR CLI",
-    "js-react-ssr-cli"
+    "js-react-ssr-cli",
+    "ts-react-ssr-cli"
   ],
   "homepage": "https://github.com/1111mp/js-react-ssr-cli",
   "repository": "https://github.com/1111mp/js-react-ssr-cli",
