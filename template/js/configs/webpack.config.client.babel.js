@@ -44,6 +44,26 @@ export default merge(baseConfig, {
     ],
   },
 
+  optimization: {
+    splitChunks: {
+      chunks: "all", // 默认就是all
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
+    },
+    runtimeChunk: {
+      name: (entrypoint) => `runtimechunk~${entrypoint.name}`,
+    },
+  },
+
   plugins: isProd
     ? [new LoadablePlugin()]
     : [

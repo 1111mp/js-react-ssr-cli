@@ -54,7 +54,7 @@ program
         },
       ])
       .then((answers) => {
-        console.log(answers);
+        // console.log(answers);
         const create = require("../create");
         create({
           ...answers,
