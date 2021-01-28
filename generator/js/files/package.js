@@ -1,10 +1,10 @@
 module.exports = function (opts = {}) {
   const temp = `
 		{
-			"name": ${opts.appName ? `"${opts.appName}"` : ""},
+			"name": ${opts.appName ? `"${opts.appName}"` : `""`},
 			"version": "1.0.0",
-			"description": ${opts.desc ? `"${opts.desc}"` : ""},
-			"author": ${opts.author ? `"${opts.author}"` : ""},
+			"description": ${opts.desc ? `"${opts.desc}"` : `""`},
+			"author": ${opts.author ? `"${opts.author}"` : `""`},
 			"license": "MIT",
 			"scripts": {
 				"dev": "cross-env NODE_ENV=development babel-node --presets @babel/preset-env src/server.js",

@@ -1,3 +1,4 @@
+import { createContext, useContext } from 'react';
 import { RouterStore } from "mobx-react-router";
 import HomeStore from "./homeStore";
 
@@ -29,7 +30,7 @@ function mergeObservables(target) {
   }
 }
 
-export default () => {
+function createStore() {
   let store = {};
 
   Object.keys(storageMap).forEach((key) => {
@@ -43,4 +44,18 @@ export default () => {
   return {
     ...store,
   };
-};
+}
+
+const stores = createStore();
+
+export const StoreContext = createContext(stores);
+
+export const useStores = () => useContext(StoreContext);
+
+export function useTargetStore(target) {
+  const stores = useStores();
+
+  return target ? stores[target] : stores;
+}
+
+export default stores;

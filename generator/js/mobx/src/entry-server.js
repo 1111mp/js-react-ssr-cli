@@ -3,7 +3,7 @@ import { StaticRouter } from "react-router-dom";
 import { Provider } from 'mobx-react';
 import { renderRoutes } from "react-router-config";
 import router from "./router";
-import createStore from "./store";
+import stores from "./store";
 import useStyles from "isomorphic-style-loader/useStyles";
 import styles from "./app.css";
 
@@ -24,6 +24,6 @@ const createApp = (context, url, store) => {
 
 export default {
   createApp,
-  createStore,
+  stores,
   router,
 };

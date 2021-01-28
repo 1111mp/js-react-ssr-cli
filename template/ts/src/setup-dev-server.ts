@@ -11,7 +11,7 @@ import serverConfig from "../configs/webpack.config.server.babel";
 export default function setupDevServer(app: express.Application, callback: Function) {
   let bundle: any;
   let loadableStats: any;
-  let resolve: VoidFunction;
+  let resolve: Function;
   const readyPromise = new Promise((r) => {
     resolve = r;
   });
@@ -29,6 +29,7 @@ export default function setupDevServer(app: express.Application, callback: Funct
     );
   };
 
+  // @ts-ignore
   const clientCompiler = webpack(clientConfig);
 
   const devMiddleware = webpackDevMiddleware(clientCompiler, {
@@ -60,6 +61,7 @@ export default function setupDevServer(app: express.Application, callback: Funct
   );
 
   // 监视服务端打包入口文件，有更改就更新
+  // @ts-ignore
   const serverCompiler = webpack(serverConfig);
   // 使用内存文件系统
   const mfs = new MFS();

@@ -6,7 +6,7 @@ import { observer } from "mobx-react";
 import useStyles from "isomorphic-style-loader/useStyles";
 import { Helmet } from "react-helmet";
 
-import { useTargetStore } from "store/hooks";
+import { useTargetStore } from "app/store";
 import HelloWorld from "components/helloworld";
 
 const Home = observer(() => {
